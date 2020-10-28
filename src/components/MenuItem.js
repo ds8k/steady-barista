@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   }
 })
 
-const MenuItem = ({ type }) => {
+const MenuItem = ({ type, color = '#8acb88' }) => {
   const dispatch = useDispatch()
 
   const onPress = useCallback(() => {
@@ -34,7 +34,7 @@ const MenuItem = ({ type }) => {
 
   return (
     <TouchableRipple onPress={onPress}>
-      <Surface style={styles.item}>
+      <Surface style={[styles.item, { backgroundColor: color }]}>
         <Subheading>{types.itemNames[type]}</Subheading>
         <Caption>{`~${types.menuWaitTimes[type]}`} secs</Caption>
       </Surface>
