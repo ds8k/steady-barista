@@ -25,7 +25,7 @@ const Counter = () => {
       }, 3000)
     }
   },[
-    isWorking,
+    counterBusy,
     nextItem.id,
     nextItem.type,
   ])
